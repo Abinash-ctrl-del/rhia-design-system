@@ -1,0 +1,66 @@
+/* RHIA Input — mirrors the Figma "Input" component set (Design System – RHIA › Inputs).
+   Uses semantic colours (semantic.css, draft), text styles and effects (styles.css). */
+
+.rhia-field { display: flex; flex-direction: column; gap: var(--spacing-8); width: 100%; font-family: var(--font-family-body); }
+.rhia-field__label { display: inline-flex; gap: var(--spacing-4); font-size: var(--font-size-14); line-height: var(--font-line-height-20); font-weight: var(--font-weight-medium); color: var(--color-text-secondary); }
+.rhia-field__required { color: var(--color-text-brand); }
+.rhia-field__hint { margin: 0; font-size: var(--font-size-13); line-height: var(--font-line-height-20); color: var(--color-text-tertiary); }
+.rhia-field.is-error .rhia-field__hint { color: var(--color-status-danger-text); }
+
+/* Control */
+.rhia-input {
+  --in-h: 40px; --in-px: var(--spacing-12); --in-fs: var(--font-size-16); --in-lh: var(--font-line-height-24);
+  display: flex; align-items: stretch; height: var(--in-h); box-sizing: border-box;
+  background: var(--color-bg-surface); border: 1px solid var(--color-border-default); border-radius: var(--radius-8);
+  box-shadow: var(--shadow-xs); overflow: hidden;
+  transition: border-color 120ms ease-out, box-shadow 120ms ease-out;
+}
+.rhia-field--s .rhia-input { --in-h: 36px; --in-fs: var(--font-size-14); --in-lh: var(--font-line-height-20); }
+.rhia-field--l .rhia-input { --in-h: 48px; --in-px: var(--spacing-16); }
+
+.rhia-input:focus-within { border-color: var(--color-border-brand); box-shadow: var(--focus-ring-xs); overflow: visible; }
+.rhia-field.is-error .rhia-input { border-color: var(--color-status-danger-border); }
+.rhia-field.is-error .rhia-input:focus-within { box-shadow: var(--focus-ring-error-xs); }
+.rhia-field.is-disabled .rhia-input { background: var(--color-bg-subtle); }
+
+.rhia-input__field { flex: 1; min-width: 0; display: flex; align-items: center; gap: var(--spacing-8); padding: 0 var(--in-px); }
+.rhia-input__field input {
+  flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; padding: 0; margin: 0;
+  font: inherit; font-size: var(--in-fs); line-height: var(--in-lh); color: var(--color-text-primary);
+}
+.rhia-input__field input::placeholder { color: var(--color-text-tertiary); }
+.rhia-input__field input:disabled { color: var(--color-text-disabled); cursor: not-allowed; }
+.rhia-input__icon { flex: none; color: var(--color-icon-muted); }
+.rhia-input__icon--error { color: var(--color-status-danger-icon); }
+.rhia-input__help { display: inline-flex; color: var(--color-icon-muted); cursor: help; border-radius: var(--radius-4); }
+.rhia-input__help:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+.rhia-input__iconbtn { display: inline-flex; padding: 0; border: 0; background: none; color: var(--color-icon-muted); cursor: pointer; border-radius: var(--radius-4); }
+.rhia-input__iconbtn:hover { color: var(--color-icon-default); }
+.rhia-input__iconbtn:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+.is-disabled .rhia-input__icon, .is-disabled .rhia-input__help, .is-disabled .rhia-input__iconbtn { color: var(--color-text-disabled); }
+
+/* Addons: prefix text, dropdowns, trailing button */
+.rhia-input__addon { display: inline-flex; align-items: center; gap: var(--spacing-4); padding: 0 var(--in-px); flex: none;
+  font-size: var(--in-fs); line-height: var(--in-lh); color: var(--color-text-tertiary); border-color: var(--color-border-default); border-style: solid; border-width: 0; }
+.rhia-input__addon--left { border-right-width: 1px; }
+.rhia-input__addon--right { border-left-width: 1px; }
+.rhia-input__button { background: none; font: inherit; font-size: var(--font-size-14); font-weight: var(--font-weight-medium); color: var(--color-text-secondary); cursor: pointer; }
+.rhia-field--l .rhia-input__button { font-size: var(--font-size-16); }
+.rhia-input__button:hover { background: var(--color-bg-hover); color: var(--color-text-primary); }
+.rhia-input__button:active { background: var(--color-bg-pressed); box-shadow: var(--shadow-pressed); }
+.rhia-input__button:focus-visible { outline: none; box-shadow: inset 0 0 0 2px var(--color-border-focus); }
+.rhia-input__button:disabled { color: var(--color-text-disabled); cursor: not-allowed; background: none; }
+
+.rhia-input__select { position: relative; display: inline-flex; align-items: center; flex: none; color: var(--color-icon-muted); }
+.rhia-input__select select {
+  appearance: none; border: 0; background: transparent; margin: 0; cursor: pointer; outline: 0;
+  font: inherit; font-size: var(--in-fs); line-height: var(--in-lh); color: var(--color-text-primary);
+  padding: 0 calc(16px + var(--spacing-4)) 0 0;
+}
+.rhia-input__select svg { position: absolute; right: 0; pointer-events: none; }
+.rhia-input__select--left, .rhia-input__select--right { padding: 0 var(--in-px); border-color: var(--color-border-default); border-style: solid; border-width: 0; }
+.rhia-input__select--left { border-right-width: 1px; }
+.rhia-input__select--right { border-left-width: 1px; }
+.rhia-input__select--left svg, .rhia-input__select--right svg { right: var(--in-px); }
+.rhia-input__select select:focus-visible { box-shadow: 0 0 0 2px var(--color-border-focus); border-radius: var(--radius-4); }
+.rhia-input__select select:disabled { color: var(--color-text-disabled); cursor: not-allowed; }

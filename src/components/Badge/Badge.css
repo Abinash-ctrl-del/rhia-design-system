@@ -1,0 +1,43 @@
+/* RHIA Badge — mirrors the Figma "Badge" component set (Design System – RHIA › Badges).
+   Optical balance like the Button: 4 px text padding, tighter outer padding on the icon side. */
+
+.rhia-badge {
+  --bd-bg: var(--color-bg-subtle); --bd-fg: var(--color-text-secondary); --bd-border: var(--color-neutral-3); --bd-dot: var(--color-icon-muted);
+  display: inline-flex; align-items: center; gap: 0; box-sizing: border-box; flex: none;
+  border-radius: var(--radius-full); border: 1px solid var(--bd-border);
+  background: var(--bd-bg); color: var(--bd-fg);
+  font-family: var(--font-family-body); font-weight: var(--font-weight-medium); white-space: nowrap; vertical-align: middle;
+}
+.rhia-badge__text { padding: 0 var(--spacing-4); }
+.rhia-badge__icon { flex: none; }
+.rhia-badge__dot { width: 6px; height: 6px; border-radius: var(--radius-full); background: var(--bd-dot); flex: none; }
+
+/* Sizes: S 20 (outer 4) · M 24 (outer 8) · L 28 (outer 8) */
+.rhia-badge--s { height: 20px; padding: 0 var(--spacing-4); font-size: var(--font-size-12); line-height: var(--font-line-height-16); }
+.rhia-badge--m { height: 24px; padding: 0 var(--spacing-8); font-size: var(--font-size-13); line-height: var(--font-line-height-20); }
+.rhia-badge--l { height: 28px; padding: 0 var(--spacing-8); font-size: var(--font-size-14); line-height: var(--font-line-height-20); }
+
+/* Soft */
+.rhia-badge--soft.rhia-badge--brand   { --bd-bg: var(--color-bg-primary-subtle);   --bd-fg: var(--color-text-brand);          --bd-border: var(--color-violet-3); --bd-dot: var(--color-violet-7); }
+.rhia-badge--soft.rhia-badge--success { --bd-bg: var(--color-status-success-bg);   --bd-fg: var(--color-status-success-text); --bd-border: var(--color-green-3);  --bd-dot: var(--color-status-success-icon); }
+.rhia-badge--soft.rhia-badge--warning { --bd-bg: var(--color-status-warning-bg);   --bd-fg: var(--color-status-warning-text); --bd-border: var(--color-amber-3);  --bd-dot: var(--color-status-warning-icon); }
+.rhia-badge--soft.rhia-badge--danger  { --bd-bg: var(--color-status-danger-bg);    --bd-fg: var(--color-status-danger-text);  --bd-border: var(--color-red-3);    --bd-dot: var(--color-status-danger-icon); }
+.rhia-badge--soft.rhia-badge--ai      { --bd-bg: var(--color-ai-bg-subtle);        --bd-fg: var(--color-ai-text);             --bd-border: var(--color-lime-3);   --bd-dot: var(--color-lime-7); }
+
+/* Solid (no border colour; dot follows the text) */
+.rhia-badge--solid { --bd-border: transparent; }
+.rhia-badge--solid.rhia-badge--neutral { --bd-bg: var(--color-bg-inverse); --bd-fg: var(--color-text-inverse); }
+.rhia-badge--solid.rhia-badge--brand   { --bd-bg: var(--color-bg-primary); --bd-fg: var(--color-text-on-primary); }
+.rhia-badge--solid.rhia-badge--success { --bd-bg: var(--color-green-7);    --bd-fg: var(--color-text-on-primary); }
+.rhia-badge--solid.rhia-badge--warning { --bd-bg: var(--color-amber-6);    --bd-fg: var(--color-static-black); }
+.rhia-badge--solid.rhia-badge--danger  { --bd-bg: var(--color-red-7);      --bd-fg: var(--color-text-on-primary); }
+.rhia-badge--solid.rhia-badge--ai      { --bd-bg: var(--color-ai-spark);   --bd-fg: var(--color-ai-on-spark); }
+.rhia-badge--solid .rhia-badge__dot { background: currentColor; }
+
+/* Remove (×) */
+.rhia-badge__remove {
+  display: inline-flex; padding: 0; margin: 0; border: 0; background: none; color: inherit; cursor: pointer;
+  border-radius: var(--radius-full); opacity: 0.8;
+}
+.rhia-badge__remove:hover { opacity: 1; }
+.rhia-badge__remove:focus-visible { outline: none; opacity: 1; box-shadow: var(--focus-ring); }

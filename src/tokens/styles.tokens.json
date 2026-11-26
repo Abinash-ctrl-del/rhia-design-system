@@ -1,0 +1,259 @@
+{
+  "$description": "Text styles and effect styles. Mirrors the Figma local styles (Design System – RHIA). Light-mode shadows.",
+  "text": {
+    "display/lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontWeight": "{font.weight.semibold}",
+        "fontSize": "{font.size.48}",
+        "lineHeight": "{font.line-height.56}",
+        "letterSpacing": "-0.03em",
+        "textTransform": "none"
+      },
+      "$description": "Hero KPI numbers"
+    },
+    "display/md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontWeight": "{font.weight.semibold}",
+        "fontSize": "{font.size.36}",
+        "lineHeight": "{font.line-height.44}",
+        "letterSpacing": "-0.03em",
+        "textTransform": "none"
+      },
+      "$description": "Large KPI numbers, empty-state headlines"
+    },
+    "heading/xl": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontWeight": "{font.weight.semibold}",
+        "fontSize": "{font.size.30}",
+        "lineHeight": "{font.line-height.36}",
+        "letterSpacing": "-0.015em",
+        "textTransform": "none"
+      },
+      "$description": "Page title"
+    },
+    "heading/lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontWeight": "{font.weight.semibold}",
+        "fontSize": "{font.size.24}",
+        "lineHeight": "{font.line-height.32}",
+        "letterSpacing": "-0.015em",
+        "textTransform": "none"
+      },
+      "$description": "Section title"
+    },
+    "heading/md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontWeight": "{font.weight.semibold}",
+        "fontSize": "{font.size.20}",
+        "lineHeight": "{font.line-height.28}",
+        "letterSpacing": "-0.015em",
+        "textTransform": "none"
+      },
+      "$description": "Card, panel and dialog titles"
+    },
+    "heading/sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.heading}",
+        "fontWeight": "{font.weight.semibold}",
+        "fontSize": "{font.size.18}",
+        "lineHeight": "{font.line-height.24}",
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "$description": "Small card titles"
+    },
+    "body/lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "{font.size.16}",
+        "lineHeight": "{font.line-height.24}",
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "$description": "Lead paragraphs, AI summaries"
+    },
+    "body/md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "{font.size.14}",
+        "lineHeight": "{font.line-height.20}",
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "$description": "Default UI text"
+    },
+    "body/sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "{font.size.13}",
+        "lineHeight": "{font.line-height.20}",
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "$description": "Dense UI, table cells"
+    },
+    "label/lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.medium}",
+        "fontSize": "{font.size.16}",
+        "lineHeight": "{font.line-height.24}",
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "$description": "XL buttons, prominent tabs"
+    },
+    "label/md": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.medium}",
+        "fontSize": "{font.size.14}",
+        "lineHeight": "{font.line-height.20}",
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "$description": "Buttons, form labels, tabs"
+    },
+    "label/sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.medium}",
+        "fontSize": "{font.size.13}",
+        "lineHeight": "{font.line-height.20}",
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "$description": "Small buttons, table headers"
+    },
+    "label/xs": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.medium}",
+        "fontSize": "{font.size.12}",
+        "lineHeight": "{font.line-height.16}",
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "$description": "Small badges, tags and counters"
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.body}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "{font.size.12}",
+        "lineHeight": "{font.line-height.16}",
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "$description": "Timestamps, helper notes"
+    },
+    "mono/sm": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.mono}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "{font.size.12}",
+        "lineHeight": "{font.line-height.16}",
+        "letterSpacing": "0",
+        "textTransform": "none"
+      },
+      "$description": "Metadata, codes, IDs"
+    },
+    "mono/overline": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.mono}",
+        "fontWeight": "{font.weight.medium}",
+        "fontSize": "{font.size.12}",
+        "lineHeight": "{font.line-height.16}",
+        "letterSpacing": "0.08em",
+        "textTransform": "uppercase"
+      },
+      "$description": "Eyebrows above titles"
+    }
+  },
+  "effect": {
+    "shadow/xs": {
+      "$type": "shadow",
+      "$value": "0 1px 2px 0 rgb(22 23 26 / 0.05)",
+      "$description": "Buttons, inputs"
+    },
+    "shadow/sm": {
+      "$type": "shadow",
+      "$value": "0 1px 3px 0 rgb(22 23 26 / 0.08), 0 1px 2px -1px rgb(22 23 26 / 0.06)",
+      "$description": "Cards at rest"
+    },
+    "shadow/md": {
+      "$type": "shadow",
+      "$value": "0 4px 8px -2px rgb(22 23 26 / 0.08), 0 2px 4px -2px rgb(22 23 26 / 0.04)",
+      "$description": "Hovered cards, sticky headers"
+    },
+    "shadow/lg": {
+      "$type": "shadow",
+      "$value": "0 12px 16px -4px rgb(22 23 26 / 0.07), 0 4px 6px -2px rgb(22 23 26 / 0.03), 0 2px 2px -1px rgb(22 23 26 / 0.03)",
+      "$description": "Menus, popovers"
+    },
+    "shadow/xl": {
+      "$type": "shadow",
+      "$value": "0 20px 24px -4px rgb(22 23 26 / 0.07), 0 8px 8px -4px rgb(22 23 26 / 0.03), 0 3px 3px -1.5px rgb(22 23 26 / 0.03)",
+      "$description": "Side sheets, toasts"
+    },
+    "shadow/2xl": {
+      "$type": "shadow",
+      "$value": "0 24px 48px -12px rgb(22 23 26 / 0.14), 0 4px 4px -2px rgb(22 23 26 / 0.03)",
+      "$description": "Dialogs"
+    },
+    "shadow/3xl": {
+      "$type": "shadow",
+      "$value": "0 32px 64px -12px rgb(22 23 26 / 0.12), 0 5px 5px -2.5px rgb(22 23 26 / 0.03)",
+      "$description": "Full-screen overlays"
+    },
+    "shadow/pressed": {
+      "$type": "shadow",
+      "$value": "inset 0 1px 2px 0 rgb(22 23 26 / 0.14), inset 0 0 0 1px rgb(22 23 26 / 0.06)",
+      "$description": "Pressed (clicked) state"
+    },
+    "focus/ring": {
+      "$type": "shadow",
+      "$value": "0 0 0 4px rgb(107 43 255 / 0.2)",
+      "$description": "Keyboard focus"
+    },
+    "focus/ring-xs": {
+      "$type": "shadow",
+      "$value": "0 0 0 4px rgb(107 43 255 / 0.2), 0 1px 2px 0 rgb(22 23 26 / 0.05)",
+      "$description": "Focus on controls with shadow/xs"
+    },
+    "focus/ring-error": {
+      "$type": "shadow",
+      "$value": "0 0 0 4px rgb(204 51 54 / 0.2)",
+      "$description": "Focus on a field with an error"
+    },
+    "focus/ring-error-xs": {
+      "$type": "shadow",
+      "$value": "0 0 0 4px rgb(204 51 54 / 0.2), 0 1px 2px 0 rgb(22 23 26 / 0.05)",
+      "$description": "Error focus on controls with shadow/xs"
+    }
+  }
+}

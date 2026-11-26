@@ -1,0 +1,273 @@
+{
+  "$description": "Semantic colour tokens — DRAFT (colours are suggestions, not final). Mirrors the Figma \"Semantic\" collection. Aliases primitives, so Light/Dark follows [data-theme].",
+  "bg": {
+    "canvas": {
+      "$type": "color",
+      "$value": "{color.neutral.2}",
+      "$description": "Outer app background behind the floating panels and top bar"
+    },
+    "page": {
+      "$type": "color",
+      "$value": "{color.neutral.1}",
+      "$description": "Floating panel background (sidebar and main content area)"
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "{color.neutral.0}",
+      "$description": "Cards, panels, inputs"
+    },
+    "subtle": {
+      "$type": "color",
+      "$value": "{color.neutral.2}",
+      "$description": "Table headers, wells"
+    },
+    "hover": {
+      "$type": "color",
+      "$value": "{color.neutral.2}",
+      "$description": "Hover fill"
+    },
+    "pressed": {
+      "$type": "color",
+      "$value": "{color.neutral.3}",
+      "$description": "Pressed fill"
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "{color.neutral.10}",
+      "$description": "Tooltips, toasts"
+    },
+    "primary": {
+      "$type": "color",
+      "$value": "{color.violet.7}",
+      "$description": "Primary buttons, active states"
+    },
+    "primary-subtle": {
+      "$type": "color",
+      "$value": "{color.violet.2}",
+      "$description": "Selected rows, soft brand fill"
+    }
+  },
+  "text": {
+    "primary": {
+      "$type": "color",
+      "$value": "{color.neutral.10}",
+      "$description": "Main text"
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "{color.neutral.8}",
+      "$description": "Supporting text"
+    },
+    "tertiary": {
+      "$type": "color",
+      "$value": "{color.neutral.7}",
+      "$description": "Helper text, placeholders"
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "{color.neutral.5}",
+      "$description": "Disabled text"
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "{color.neutral.1}",
+      "$description": "Text on bg/inverse"
+    },
+    "brand": {
+      "$type": "color",
+      "$value": "{color.violet.8}",
+      "$description": "Links, brand text"
+    },
+    "on-primary": {
+      "$type": "color",
+      "$value": "{color.static.white}",
+      "$description": "Text on bg/primary"
+    },
+    "on-spark": {
+      "$type": "color",
+      "$value": "{color.static.black}",
+      "$description": "Text on the AI spark"
+    }
+  },
+  "border": {
+    "subtle": {
+      "$type": "color",
+      "$value": "{color.neutral.3}",
+      "$description": "Dividers, card edges"
+    },
+    "default": {
+      "$type": "color",
+      "$value": "{color.neutral.4}",
+      "$description": "Inputs, outlined buttons"
+    },
+    "strong": {
+      "$type": "color",
+      "$value": "{color.neutral.6}",
+      "$description": "Emphasised borders"
+    },
+    "brand": {
+      "$type": "color",
+      "$value": "{color.violet.7}",
+      "$description": "Selected / brand borders"
+    },
+    "focus": {
+      "$type": "color",
+      "$value": "{color.violet.8}",
+      "$description": "Focus outline"
+    },
+    "highlight": {
+      "$type": "color",
+      "$value": "{color.neutral.0}",
+      "$description": "1px inner edge on floating panels: white in Light, faint edge in Dark"
+    }
+  },
+  "icon": {
+    "default": {
+      "$type": "color",
+      "$value": "{color.neutral.8}",
+      "$description": "Default icons"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "{color.neutral.7}",
+      "$description": "Secondary icons"
+    },
+    "brand": {
+      "$type": "color",
+      "$value": "{color.violet.8}",
+      "$description": "Brand icons"
+    },
+    "on-primary": {
+      "$type": "color",
+      "$value": "{color.static.white}",
+      "$description": "Icons on bg/primary"
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "{color.neutral.1}",
+      "$description": "Icons on bg/inverse (active nav item)"
+    },
+    "subtle": {
+      "$type": "color",
+      "$value": "{color.neutral.5}",
+      "$description": "Quiet decorative marks (list bullets, separator dots). Not for meaningful icons."
+    }
+  },
+  "status": {
+    "success": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.green.8}",
+        "$description": "success text"
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{color.green.2}",
+        "$description": "success background"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.green.5}",
+        "$description": "success border"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{color.green.7}",
+        "$description": "success icon"
+      }
+    },
+    "warning": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.amber.8}",
+        "$description": "warning text"
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{color.amber.2}",
+        "$description": "warning background"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.amber.5}",
+        "$description": "warning border"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{color.amber.7}",
+        "$description": "warning icon"
+      }
+    },
+    "danger": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.red.8}",
+        "$description": "danger text"
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{color.red.2}",
+        "$description": "danger background"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.red.5}",
+        "$description": "danger border"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{color.red.7}",
+        "$description": "danger icon"
+      }
+    },
+    "info": {
+      "text": {
+        "$type": "color",
+        "$value": "{color.violet.8}",
+        "$description": "info text"
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "{color.violet.2}",
+        "$description": "info background"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.violet.5}",
+        "$description": "info border"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{color.violet.7}",
+        "$description": "info icon"
+      }
+    }
+  },
+  "ai": {
+    "spark": {
+      "$type": "color",
+      "$value": "{color.static.spark}",
+      "$description": "AI spark (lime)"
+    },
+    "on-spark": {
+      "$type": "color",
+      "$value": "{color.static.black}",
+      "$description": "Text/icons on the spark"
+    },
+    "bg-subtle": {
+      "$type": "color",
+      "$value": "{color.lime.2}",
+      "$description": "AI card background"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{color.lime.9}",
+      "$description": "AI text"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.lime.6}",
+      "$description": "AI card border"
+    }
+  }
+}

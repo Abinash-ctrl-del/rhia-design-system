@@ -1,0 +1,39 @@
+/* RHIA Toggle — mirrors Figma "Toggle base" + "Toggle" (Toggles page). */
+.rhia-toggle { display: inline-flex; align-items: flex-start; gap: var(--spacing-8); font-family: var(--font-family-body); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.rhia-toggle--m { gap: var(--spacing-12); }
+.rhia-toggle.is-disabled { cursor: not-allowed; }
+
+.rhia-toggle__control { position: relative; display: inline-flex; align-items: center; flex: none; min-height: 20px; }
+.rhia-toggle--m .rhia-toggle__control { min-height: 24px; }
+.rhia-toggle__input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: inherit; }
+
+.rhia-toggle__track {
+  --knob: 16px; width: 36px; height: 20px; padding: 2px; box-sizing: border-box; display: inline-flex; align-items: center;
+  border-radius: var(--radius-full); background: var(--color-bg-pressed); transition: background-color 150ms ease-out, box-shadow 120ms ease-out;
+}
+.rhia-toggle--m .rhia-toggle__track { --knob: 20px; width: 44px; height: 24px; }
+.rhia-toggle__knob {
+  width: var(--knob); height: var(--knob); border-radius: var(--radius-full); background: var(--color-static-white); box-shadow: var(--shadow-sm);
+  transition: transform 150ms ease-out;
+}
+/* Off hover */
+.rhia-toggle:hover .rhia-toggle__input:enabled:not(:checked) + .rhia-toggle__track { background: var(--color-neutral-4); }
+/* On */
+.rhia-toggle__input:checked + .rhia-toggle__track { background: var(--color-bg-primary); }
+.rhia-toggle__input:checked + .rhia-toggle__track .rhia-toggle__knob { transform: translateX(16px); }
+.rhia-toggle:hover .rhia-toggle__input:enabled:checked + .rhia-toggle__track { background: var(--color-violet-8); }
+/* Focus (keyboard) */
+.rhia-toggle__input:focus-visible + .rhia-toggle__track { box-shadow: var(--focus-ring-xs); }
+/* Disabled */
+.rhia-toggle__input:disabled + .rhia-toggle__track { background: var(--color-bg-subtle); }
+.rhia-toggle__input:disabled:checked + .rhia-toggle__track { background: var(--color-violet-3); }
+.rhia-toggle__input:disabled + .rhia-toggle__track .rhia-toggle__knob { box-shadow: none; }
+
+.rhia-toggle__text { display: flex; flex-direction: column; min-width: 0; }
+.rhia-toggle__label { font-size: var(--font-size-14); line-height: var(--font-line-height-20); font-weight: var(--font-weight-medium); color: var(--color-text-primary); }
+.rhia-toggle__hint { font-size: var(--font-size-14); line-height: var(--font-line-height-20); color: var(--color-text-tertiary); }
+.rhia-toggle--m .rhia-toggle__label, .rhia-toggle--m .rhia-toggle__hint { font-size: var(--font-size-16); line-height: var(--font-line-height-24); }
+.rhia-toggle.is-disabled .rhia-toggle__label, .rhia-toggle.is-disabled .rhia-toggle__hint { color: var(--color-text-disabled); }
+
+@media (prefers-reduced-motion: reduce) { .rhia-toggle__track, .rhia-toggle__knob { transition: none; } }
+.rhia-toggle--m .rhia-toggle__input:checked + .rhia-toggle__track .rhia-toggle__knob { transform: translateX(20px); }

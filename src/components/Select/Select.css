@@ -1,0 +1,62 @@
+/* RHIA Select — mirrors the Figma "Select" + "Menu item" component sets (Design System – RHIA › Selects).
+   Field, label and hint styles come from Input.css so inputs and selects line up. */
+
+.rhia-select__anchor { position: relative; }
+.rhia-select__trigger {
+  --in-h: 40px; --in-px: var(--spacing-12); --in-fs: var(--font-size-16); --in-lh: var(--font-line-height-24);
+  display: flex; align-items: center; gap: var(--spacing-8); height: var(--in-h); box-sizing: border-box; padding: 0 var(--in-px);
+  background: var(--color-bg-surface); border: 1px solid var(--color-border-default); border-radius: var(--radius-8);
+  box-shadow: var(--shadow-xs); cursor: pointer; outline: none; overflow: hidden;
+  font-size: var(--in-fs); line-height: var(--in-lh); color: var(--color-text-primary);
+  transition: border-color 120ms ease-out, box-shadow 120ms ease-out;
+}
+.rhia-field--s .rhia-select__trigger { --in-h: 36px; --in-fs: var(--font-size-14); --in-lh: var(--font-line-height-20); }
+.rhia-field--l .rhia-select__trigger { --in-h: 48px; --in-px: var(--spacing-16); }
+.rhia-select__trigger:focus-visible, .rhia-select__trigger:focus-within, .rhia-select.is-open .rhia-select__trigger { border-color: var(--color-border-brand); box-shadow: var(--focus-ring-xs); }
+.rhia-select.is-error .rhia-select__trigger { border-color: var(--color-status-danger-border); }
+.rhia-select.is-error .rhia-select__trigger:focus-visible, .rhia-select.is-error.is-open .rhia-select__trigger { box-shadow: var(--focus-ring-error-xs); }
+.rhia-select.is-disabled .rhia-select__trigger { background: var(--color-bg-subtle); color: var(--color-text-disabled); cursor: not-allowed; }
+
+.rhia-select__value { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rhia-select__value.is-placeholder { color: var(--color-text-tertiary); }
+.rhia-select.is-disabled .rhia-select__value { color: var(--color-text-disabled); }
+.rhia-select__search { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; padding: 0; font: inherit; font-size: var(--in-fs); line-height: var(--in-lh); color: var(--color-text-primary); cursor: text; }
+.rhia-select__search::placeholder { color: var(--color-text-tertiary); }
+.rhia-select__chips { flex: 1; min-width: 0; display: flex; gap: var(--spacing-4); overflow: hidden; }
+.rhia-select__icon { flex: none; color: var(--color-icon-muted); }
+.rhia-select__icon--error { color: var(--color-status-danger-icon); }
+.rhia-select.is-disabled .rhia-select__icon { color: var(--color-text-disabled); }
+
+/* Menu panel */
+.rhia-menu {
+  position: absolute; left: 0; right: 0; top: calc(100% + var(--spacing-4)); z-index: 20;
+  margin: 0; padding: var(--spacing-4); list-style: none; max-height: 288px; overflow: auto; box-sizing: border-box;
+  background: var(--color-bg-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-8); box-shadow: var(--shadow-lg);
+  font-family: var(--font-family-body);
+}
+.rhia-menu__empty { padding: var(--spacing-8); font-size: var(--font-size-14); line-height: var(--font-line-height-20); color: var(--color-text-tertiary); }
+
+/* Menu item: S 32 (S selects) · M 40 (M and L selects) */
+.rhia-menu-item {
+  display: flex; align-items: center; gap: var(--spacing-8); height: 40px; padding: 0 var(--spacing-8); border-radius: var(--radius-6);
+  font-size: var(--font-size-16); line-height: var(--font-line-height-24); color: var(--color-text-primary); cursor: pointer; user-select: none;
+}
+.rhia-menu-item--s { height: 32px; font-size: var(--font-size-14); line-height: var(--font-line-height-20); }
+.rhia-menu-item.is-active, .rhia-menu-item.is-selected { background: var(--color-bg-hover); }
+.rhia-menu-item.is-disabled { color: var(--color-text-disabled); cursor: not-allowed; background: none; }
+.rhia-menu-item__text { flex: 1; min-width: 0; display: flex; gap: var(--spacing-8); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.rhia-menu-item__supporting { color: var(--color-text-tertiary); }
+.rhia-menu-item__icon { flex: none; color: var(--color-icon-muted); }
+.rhia-menu-item__check { flex: none; color: var(--color-text-brand); }
+.rhia-menu-item.is-disabled .rhia-menu-item__icon { color: var(--color-text-disabled); }
+.rhia-menu-item__checkbox {
+  flex: none; width: 16px; height: 16px; box-sizing: border-box; border-radius: var(--radius-4); display: inline-flex; align-items: center; justify-content: center;
+  background: var(--color-bg-surface); border: 1px solid var(--color-border-default); color: var(--color-text-on-primary);
+}
+.rhia-menu-item__checkbox.is-checked { background: var(--color-bg-primary); border-color: var(--color-bg-primary); }
+.rhia-menu-item__dot { flex: none; width: 8px; height: 8px; border-radius: var(--radius-full); background: var(--color-icon-muted); }
+.rhia-dot--success { background: var(--color-status-success-icon); }
+.rhia-dot--warning { background: var(--color-status-warning-icon); }
+.rhia-dot--danger { background: var(--color-status-danger-icon); }
+.rhia-dot--brand { background: var(--color-violet-7); }
+.rhia-menu-item.is-disabled .rhia-menu-item__dot { background: var(--color-text-disabled); }

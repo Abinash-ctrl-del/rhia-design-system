@@ -1,0 +1,99 @@
+/* RHIA Button — mirrors the Figma "Button" component set (Design System – RHIA › Buttons).
+   Uses the semantic colour tokens (semantic.css, draft) and effect styles (styles.css).
+   Hover/pressed shades use primitives until hover tokens exist. Light/Dark follows [data-theme]. */
+
+.rhia-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4);
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: background-color 120ms ease-out, color 120ms ease-out, box-shadow 80ms ease-out, border-color 120ms ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Text padding: 4px each side, so the text side reads 4px roomier than the icon side (optical balance). */
+.rhia-btn__text { padding: 0 var(--spacing-4); }
+.rhia-btn__icon { flex: none; }
+
+/* Sizes */
+.rhia-btn--xs { height: 28px; padding: 0 var(--spacing-8);  border-radius: var(--radius-6); font-size: var(--font-size-13); line-height: var(--font-line-height-20); }
+.rhia-btn--s  { height: 32px; padding: 0 var(--spacing-12); border-radius: var(--radius-6); font-size: var(--font-size-13); line-height: var(--font-line-height-20); }
+.rhia-btn--m  { height: 36px; padding: 0 var(--spacing-12); border-radius: var(--radius-8); font-size: var(--font-size-14); line-height: var(--font-line-height-20); }
+.rhia-btn--l  { height: 40px; padding: 0 var(--spacing-16); border-radius: var(--radius-8); font-size: var(--font-size-14); line-height: var(--font-line-height-20); }
+.rhia-btn--xl { height: 48px; padding: 0 var(--spacing-20); border-radius: var(--radius-8); font-size: var(--font-size-16); line-height: var(--font-line-height-24); }
+.rhia-btn--icon-only { padding: 0; aspect-ratio: 1; }
+/* Gap between icon and text padding: 0 for XS–M (text padding alone gives 4px), 4 for L–XL (8px total). */
+.rhia-btn--xs, .rhia-btn--s, .rhia-btn--m { gap: 0; }
+.rhia-btn--l, .rhia-btn--xl { gap: var(--spacing-4); }
+.rhia-btn--link { gap: var(--spacing-4); }
+
+/* Focus: soft 4px halo, keyboard only */
+.rhia-btn:focus-visible { outline: none; box-shadow: var(--focus-ring-xs); }
+
+/* Primary */
+.rhia-btn--primary { background: var(--color-bg-primary); color: var(--color-text-on-primary); box-shadow: var(--shadow-xs); }
+.rhia-btn--primary:hover { background: var(--color-violet-8); }
+.rhia-btn--primary:active { background: var(--color-violet-9); box-shadow: var(--shadow-pressed); }
+
+/* Secondary */
+.rhia-btn--secondary { background: var(--color-bg-primary-subtle); color: var(--color-text-brand); }
+.rhia-btn--secondary:hover { background: var(--color-violet-3); }
+.rhia-btn--secondary:active { background: var(--color-violet-4); color: var(--color-violet-9); box-shadow: var(--shadow-pressed); }
+
+/* Outlined */
+.rhia-btn--outlined { background: var(--color-bg-surface); color: var(--color-text-primary); border-color: var(--color-border-default); box-shadow: var(--shadow-xs); }
+.rhia-btn--outlined:hover { background: var(--color-bg-hover); }
+.rhia-btn--outlined:active { background: var(--color-bg-pressed); box-shadow: var(--shadow-pressed); }
+
+/* Ghost */
+.rhia-btn--ghost { background: transparent; color: var(--color-text-secondary); }
+.rhia-btn--ghost:hover { background: var(--color-bg-hover); color: var(--color-text-primary); }
+.rhia-btn--ghost:active { background: var(--color-bg-pressed); color: var(--color-text-primary); box-shadow: var(--shadow-pressed); }
+
+/* Link */
+.rhia-btn--link { background: transparent; color: var(--color-text-brand); height: auto; padding: 0; border: 0; border-radius: var(--radius-4); }
+.rhia-btn--link .rhia-btn__text { padding: 0; }
+.rhia-btn--link:hover { color: var(--color-violet-9); text-decoration: underline; text-underline-offset: 3px; }
+.rhia-btn--link:active { color: var(--color-violet-10); text-decoration: underline; text-underline-offset: 3px; }
+.rhia-btn--link:focus-visible { box-shadow: var(--focus-ring); }
+
+/* Destructive (solid) */
+.rhia-btn--destructive { background: var(--color-red-7); color: var(--color-text-on-primary); box-shadow: var(--shadow-xs); }
+.rhia-btn--destructive:hover { background: var(--color-red-8); }
+.rhia-btn--destructive:active { background: var(--color-red-9); box-shadow: var(--shadow-pressed); }
+
+/* Destructive outlined */
+.rhia-btn--destructive-outlined { background: var(--color-bg-surface); color: var(--color-status-danger-text); border-color: var(--color-status-danger-border); box-shadow: var(--shadow-xs); }
+.rhia-btn--destructive-outlined:hover { background: var(--color-status-danger-bg); }
+.rhia-btn--destructive-outlined:active { background: var(--color-red-3); box-shadow: var(--shadow-pressed); }
+
+/* Destructive ghost */
+.rhia-btn--destructive-ghost { background: transparent; color: var(--color-status-danger-text); }
+.rhia-btn--destructive-ghost:hover { background: var(--color-status-danger-bg); }
+.rhia-btn--destructive-ghost:active { background: var(--color-red-3); box-shadow: var(--shadow-pressed); }
+
+.rhia-btn--destructive:focus-visible, .rhia-btn--destructive-outlined:focus-visible { box-shadow: var(--focus-ring-error-xs); }
+.rhia-btn--destructive-ghost:focus-visible { box-shadow: var(--focus-ring-error); }
+
+/* Loading: keeps the Default look, spinner in the icon slot, no hover/press feedback */
+.rhia-btn--loading { cursor: progress; }
+.rhia-btn__spinner { animation: rhia-btn-spin 0.8s linear infinite; }
+@keyframes rhia-btn-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .rhia-btn__spinner { animation-duration: 2.4s; } }
+
+/* Disabled */
+.rhia-btn:disabled { cursor: not-allowed; color: var(--color-text-disabled); box-shadow: none; text-decoration: none; }
+.rhia-btn--primary:disabled, .rhia-btn--secondary:disabled, .rhia-btn--destructive:disabled { background: var(--color-bg-subtle); }
+.rhia-btn--outlined:disabled, .rhia-btn--destructive-outlined:disabled { background: var(--color-bg-surface); border-color: var(--color-border-subtle); }
+.rhia-btn--ghost:disabled, .rhia-btn--link:disabled, .rhia-btn--destructive-ghost:disabled { background: transparent; }
